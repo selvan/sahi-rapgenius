@@ -1,0 +1,10 @@
+/* Test 'login via twitter' functionality */
+
+_click(_link("Sign in"));
+_click(_link("Sign in with Twitter"));
+_click(_div("bd"));
+_setValue(_textbox("session[username_or_email]"), "vivek@sahi.co.in");
+_setValue(_password("session[password]"), "somepassword");
+_click(_submit("Authorize app"));
+_assert(_isVisible(_link("SahiTest")));
+_click(_link("Sign out"));

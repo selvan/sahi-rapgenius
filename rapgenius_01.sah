@@ -1,0 +1,9 @@
+/* Test 'create an account' functionality */
+
+_click(_link("Create an account"));
+_click(_link("Sign up with an email address"));
+_click(_submit("Create Account"));
+_assert(_isVisible(_label("Enter a nickname")));
+_assert(_isVisible(_label("Enter your email address")));
+_assert(_isVisible(_label("Enter a password")));
+
